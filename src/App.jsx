@@ -47,7 +47,7 @@ const posts = [
 
 export function App() {
   return (
-    <>
+    <div>
       <Header />
 
       <div className={styles.wrapper}>
@@ -56,14 +56,15 @@ export function App() {
           {posts.map((post) => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
-                publishedAt={post.publishedAt} 
+                publishedAt={post.publishedAt}
               />
             );
           })}
         </main>
       </div>
-    </>
+    </div>
   );
 }
